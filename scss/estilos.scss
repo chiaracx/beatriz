@@ -1,0 +1,345 @@
+$pink: #FA9191;
+$yellow: #f3b94e;
+$lightBlue: #63b7af;
+$white: #fff;
+$titulos: "Nanum Myeongjo";
+$fontBody: "Roboto";
+$fontFantasia: "Dancing Script";
+
+$colors: (pink: #FA9191, yellow: #f3b94e, lightBlue: #63b7af, white: #fff);
+
+$titpagina: "inicio","menus", "contacto", "clases", "pasteleria";
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+:root{
+	font-size: 10px
+}
+*{box-sizing: border-box;}
+
+@mixin fontySize($font,$size){
+    font-family: $font;
+    font-size: $size;
+}
+    
+@each $nombre in $titpagina {
+    .pagina-#{$nombre}{
+        @include fontySize($titulos, 5rem)
+        text-align: center;
+        font-weight: bolder;
+    }    
+}
+
+@each $nombre, $color in $colors {
+    .texto-#{$nombre}{
+        color: $color;
+    }   
+    .fondo-#{$nombre}{
+        background-color: $color;
+    } 
+}
+
+body{
+    @include fontySize($fontBody, 1.8rem)
+	}
+
+@keyframes aparicionLogo{
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+
+
+.menu{
+	text-align: center;
+	font-size: 2rem;
+    display: flex;
+    flex-direction: row;
+	padding: 1.5rem;
+	border-bottom: 2px solid rgba(196,196,196,0.8);
+	margin-bottom: 1rem;
+	align-items: center;
+	flex-direction: row;
+    justify-content: space-between;
+    div{
+        div{
+            a{
+                border-radius: 50%;
+                padding: 20px;
+                background-color: $pink;
+                color: white;
+                text-decoration: none;
+                &:hover{
+                background-color: darken($pink, 5%);
+                }
+            }
+        }
+    }
+}
+
+.navbar-toggler-icon{
+    width: 3rem;
+    height: 3rem;
+}
+
+.encabezado{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/*background-color: #ffd740;*/
+	background-image: url("../imagenes/torta2.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	margin-top: 8vh;
+	padding: 15vh;
+    overflow: hidden;
+    .contenedor-logo{
+        overflow: hidden;
+        width: 25vw;
+        height: 30vh;
+        border-radius: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation-name: aparicionLogo;
+        animation-duration: 2000ms;
+    }
+    img{
+        width: 250px;
+    }
+}
+
+
+.seccion-1{
+	grid-area: section;
+	line-height: 1.5;
+	padding: 10px;
+	margin: 10px;
+	margin-left: 5vw;
+    article{
+	line-height: 1.5;
+    }
+    form{ 
+        div{
+        margin-bottom: 2vh;
+            input{
+                border: 0;
+	            border-bottom: 1px solid #555;
+	            background-color: transparent;
+	            padding: 5px;
+            }
+        }
+    }
+}
+
+#parrafo-inicio {
+	font-size: 1.8rem; 
+	line-height: 1.2;
+	display: inline-block;
+}
+
+.subtitulo{
+    @include fontySize($titulos, 3rem)
+    padding: 2rem;
+}
+.seccion-2{
+	margin-left: 5vw;
+    margin-bottom: 4vh;
+    div{
+        h3{
+            font-family: $titulos;
+	        font-size:2rem;
+        }
+    }
+    article{
+        line-height: 1.5;
+    }
+    form{
+        div{
+            margin-bottom: 2vh;
+            input{
+                border: 0;
+                border-bottom: 1px solid #555;
+                background-color: transparent;
+                padding: 5px;
+            }
+        }
+    }
+}
+
+.carousel-item{
+	overflow: hidden;
+	height: 60vh;
+	justify-content: center;
+	align-items: center;
+}
+
+.seccion-2{ 
+    #firstRow,#secondRow,#thirdRow{
+	margin: 1rem;
+	padding: 1vw;
+	border: 5px solid $yellow;
+	line-height: 2;
+	display: flex;
+	flex-direction: row;
+    }
+}
+.precio{
+    text-align: right;
+    font-weight: bolder;
+}
+
+.contenedor-imagenes-bottom{
+	display: flex;
+	flex-direction: row;
+	align-content: center;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.titulo{
+	font-family: "Dancing Script";
+	font-size: 2rem;
+}
+
+.receta{
+	grid-area: aside;
+	margin-top: 10vh;
+	margin-bottom: 10vh;
+	margin-right: 5vw;
+	overflow: scroll;
+	background-color: lighten($yellow, 15%); 
+	font-family: $fontBody;
+	padding: 2.5rem; 
+	font-size: 1.5rem;
+    border: 4px dotted rgba(240,240,240,1);
+    h2{
+        font-size: 3rem;
+        font-family: $fontFantasia;
+    }
+    h3{
+        font-size: 2.5rem;
+        font-family: $fontFantasia;
+    }
+    ol{
+        margin-bottom: 2vh;
+    }
+    .contenedor-receta{
+        margin-left: 2vw;
+        display: flex;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        width: 15vw;
+        height: 15vh;
+        overflow: hidden;
+        border-radius: 20%;
+        img{
+            flex-basis: 100%;
+            width:100%;
+            height: auto;
+        }
+    }
+}
+.pie-pagina{
+	background-color: rgba(196,196,196,0.8); 
+	font-style: oblique;
+}
+ul {
+    li {
+	color: #6B6B6B; font-weight: bold; line-height: 1.2;
+    }
+}
+ol{ 
+    li {
+	color: #2B2B2B; font-style: italic; line-height: 1.2;
+    }
+}
+
+.img-thumbnail{
+    &:hover{
+        transform: scale(1.3); 
+    }
+}
+.imagenes-menus{
+	overflow: hidden;
+	width: 15vw;
+	height: 20vh;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+    align-items: center;
+    img{
+        width: 200px;
+    }
+}
+
+#lista-pasteleria{
+	margin: 10px;
+}
+.flex-clases{
+	display: flex;
+	flex-direction: column;
+}
+.curso{
+	
+	border: 2px solid $yellow;
+}
+
+button + button{
+	margin: 2rem;
+}
+
+@media (max-width: 575px){
+	.menu{
+        font-size: 1.3rem;
+        div{
+            div{
+                a{
+                    padding: 5px;
+                }
+            }
+        }
+    }
+	.encabezado{
+		margin-top: 6vh;
+    }
+    .receta{
+        .contenedor-receta{
+            img{
+                display: none;
+            }
+        }
+    }
+}
+@media (min-width: 576px) and (max-width: 991px){
+    .menu{ 
+        font-size: 1.6rem;
+        div{
+            div{
+                a{
+                    padding: 9px;
+                }
+            }
+        }
+    }
+	.encabezado{
+		margin-top: 7vh;
+    }
+    .receta{
+        .contenedor-receta{
+            img{
+                display: none;
+            }
+        }
+    }
+}
+@media (min-width: 1100px){
+    .pagina-clases{
+        margin-right: 8vw;
+    }
+    .pagina-pasteleria{
+        margin-right: 8vw;
+    }
+}
