@@ -7337,8 +7337,7 @@ body {
   margin-bottom: 1rem;
   align-items: center;
   flex-direction: row;
-  justify-content: space-between;
-  font-weight: bolder; }
+  justify-content: space-between; }
   .menu div {
     position: relative; }
     .menu div div {
@@ -7538,11 +7537,14 @@ button + button {
 
 @media (max-width: 575px) {
   .menu {
-    font-size: 1.3rem; }
+    font-size: 1.5rem;
+    padding: .5rem; }
     .menu div div a {
       padding: 5px; }
   .encabezado {
     margin-top: 6vh; }
+    .encabezado h1 {
+      font-size: 4rem; }
   .receta .contenedor-receta img {
     display: none; } }
 
@@ -7553,6 +7555,8 @@ button + button {
       padding: 9px; }
   .encabezado {
     margin-top: 7vh; }
+    .encabezado h1 {
+      font-size: 4rem; }
   .receta .contenedor-receta img {
     display: none; } }
 
