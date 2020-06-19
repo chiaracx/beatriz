@@ -2,11 +2,13 @@ $pink: #FA9191;
 $yellow: #f3b94e;
 $lightBlue: #63b7af;
 $white: #fff;
-$titulos: "Nanum Myeongjo";
-$fontBody: "Roboto";
+$grey: #f5f5f5;
+$pink2: #ffe8df;
+$titulos: "Lora";
+$fontBody: "Lato";
 $fontFantasia: "Dancing Script";
 
-$colors: (pink: #FA9191, yellow: #f3b94e, lightBlue: #63b7af, white: #fff);
+$colors: (pink: #FA9191, yellow: #f3b94e, lightBlue: #63b7af, white: #fff, grey: #f5f5f5, pink2: #ffe8df);
 
 $titpagina: "inicio","menus", "contacto", "clases", "pasteleria";
 
@@ -24,7 +26,7 @@ $titpagina: "inicio","menus", "contacto", "clases", "pasteleria";
     
 @each $nombre in $titpagina {
     .pagina-#{$nombre}{
-        @include fontySize($titulos, 5rem)
+        @include fontySize($titulos, 5rem);
         text-align: center;
         font-weight: bolder;
     }    
@@ -56,25 +58,33 @@ body{
     display: flex;
     flex-direction: row;
 	padding: 1.5rem;
-	border-bottom: 2px solid rgba(196,196,196,0.8);
+	border-bottom: 2px solid $grey;
 	margin-bottom: 1rem;
 	align-items: center;
 	flex-direction: row;
     justify-content: space-between;
+    font-weight: bolder;
     div{
+        position: relative;
         div{
+            position: absolute;
+            left: 15%;
             a{
-                border-radius: 50%;
-                padding: 20px;
-                background-color: $pink;
-                color: white;
+                /*border-radius: 50%;*/
+                /*padding: 15px;*/
+                background-color: $white;
+                color: lighten($yellow, 5%);
                 text-decoration: none;
                 &:hover{
-                background-color: darken($pink, 5%);
+                text-decoration: underline;
+                /*background-color: $grey;*/
                 }
             }
         }
     }
+}
+a+a{
+    margin-right: 25px;
 }
 
 .navbar-toggler-icon{
@@ -86,7 +96,6 @@ body{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	/*background-color: #ffd740;*/
 	background-image: url("../imagenes/torta2.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -140,8 +149,9 @@ body{
 }
 
 .subtitulo{
-    @include fontySize($titulos, 3rem)
+    @include fontySize($fontBody, 3.5rem);
     padding: 2rem;
+    margin-top: 50px;
 }
 .seccion-2{
 	margin-left: 5vw;
@@ -209,18 +219,21 @@ body{
 	margin-bottom: 10vh;
 	margin-right: 5vw;
 	overflow: scroll;
-	background-color: lighten($yellow, 15%); 
+	background-color:$white; 
 	font-family: $fontBody;
 	padding: 2.5rem; 
 	font-size: 1.5rem;
-    border: 4px dotted rgba(240,240,240,1);
+    border: 4px dotted $yellow;
     h2{
         font-size: 3rem;
         font-family: $fontFantasia;
+        border-bottom: 2px solid $yellow;
+        text-align: center;
     }
     h3{
         font-size: 2.5rem;
         font-family: $fontFantasia;
+        text-align: center;
     }
     ol{
         margin-bottom: 2vh;
@@ -239,6 +252,7 @@ body{
             flex-basis: 100%;
             width:100%;
             height: auto;
+            align-items: center;
         }
     }
 }

@@ -22,6 +22,8 @@
   --yellow: #f3b94e;
   --lightBlue: #63b7af;
   --white: #fff;
+  --grey: #f5f5f5;
+  --pink2: #ffe8df;
   --primary: #007bff;
   --secondary: #6c757d;
   --success: #28a745;
@@ -7172,31 +7174,31 @@ a.text-dark:hover, a.text-dark:focus {
   box-sizing: border-box; }
 
 .pagina-inicio {
-  font-family: "Nanum Myeongjo";
+  font-family: "Lora";
   font-size: 5rem;
   text-align: center;
   font-weight: bolder; }
 
 .pagina-menus {
-  font-family: "Nanum Myeongjo";
+  font-family: "Lora";
   font-size: 5rem;
   text-align: center;
   font-weight: bolder; }
 
 .pagina-contacto {
-  font-family: "Nanum Myeongjo";
+  font-family: "Lora";
   font-size: 5rem;
   text-align: center;
   font-weight: bolder; }
 
 .pagina-clases {
-  font-family: "Nanum Myeongjo";
+  font-family: "Lora";
   font-size: 5rem;
   text-align: center;
   font-weight: bolder; }
 
 .pagina-pasteleria {
-  font-family: "Nanum Myeongjo";
+  font-family: "Lora";
   font-size: 5rem;
   text-align: center;
   font-weight: bolder; }
@@ -7303,8 +7305,20 @@ a.text-dark:hover, a.text-dark:focus {
 .fondo-white {
   background-color: #fff; }
 
+.texto-grey {
+  color: #f5f5f5; }
+
+.fondo-grey {
+  background-color: #f5f5f5; }
+
+.texto-pink2 {
+  color: #ffe8df; }
+
+.fondo-pink2 {
+  background-color: #ffe8df; }
+
 body {
-  font-family: "Roboto";
+  font-family: "Lato";
   font-size: 1.8rem; }
 
 @keyframes aparicionLogo {
@@ -7319,19 +7333,29 @@ body {
   display: flex;
   flex-direction: row;
   padding: 1.5rem;
-  border-bottom: 2px solid rgba(196, 196, 196, 0.8);
+  border-bottom: 2px solid #f5f5f5;
   margin-bottom: 1rem;
   align-items: center;
   flex-direction: row;
-  justify-content: space-between; }
-  .menu div div a {
-    border-radius: 50%;
-    padding: 20px;
-    background-color: #FA9191;
-    color: white;
-    text-decoration: none; }
-    .menu div div a:hover {
-      background-color: #f97979; }
+  justify-content: space-between;
+  font-weight: bolder; }
+  .menu div {
+    position: relative; }
+    .menu div div {
+      position: absolute;
+      left: 15%; }
+      .menu div div a {
+        /*border-radius: 50%;*/
+        /*padding: 15px;*/
+        background-color: #fff;
+        color: #f5c266;
+        text-decoration: none; }
+        .menu div div a:hover {
+          text-decoration: underline;
+          /*background-color: $grey;*/ }
+
+a + a {
+  margin-right: 25px; }
 
 .navbar-toggler-icon {
   width: 3rem;
@@ -7341,7 +7365,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /*background-color: #ffd740;*/
   background-image: url("../imagenes/torta2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -7384,15 +7407,16 @@ body {
   display: inline-block; }
 
 .subtitulo {
-  font-family: "Nanum Myeongjo";
-  font-size: 3rem;
-  padding: 2rem; }
+  font-family: "Lato";
+  font-size: 3.5rem;
+  padding: 2rem;
+  margin-top: 50px; }
 
 .seccion-2 {
   margin-left: 5vw;
   margin-bottom: 4vh; }
   .seccion-2 div h3 {
-    font-family: "Nanum Myeongjo";
+    font-family: "Lora";
     font-size: 2rem; }
   .seccion-2 article {
     line-height: 1.5; }
@@ -7439,17 +7463,20 @@ body {
   margin-bottom: 10vh;
   margin-right: 5vw;
   overflow: scroll;
-  background-color: #f8d596;
-  font-family: "Roboto";
+  background-color: #fff;
+  font-family: "Lato";
   padding: 2.5rem;
   font-size: 1.5rem;
-  border: 4px dotted #f0f0f0; }
+  border: 4px dotted #f3b94e; }
   .receta h2 {
     font-size: 3rem;
-    font-family: "Dancing Script"; }
+    font-family: "Dancing Script";
+    border-bottom: 2px solid #f3b94e;
+    text-align: center; }
   .receta h3 {
     font-size: 2.5rem;
-    font-family: "Dancing Script"; }
+    font-family: "Dancing Script";
+    text-align: center; }
   .receta ol {
     margin-bottom: 2vh; }
   .receta .contenedor-receta {
@@ -7465,7 +7492,8 @@ body {
     .receta .contenedor-receta img {
       flex-basis: 100%;
       width: 100%;
-      height: auto; }
+      height: auto;
+      align-items: center; }
 
 .pie-pagina {
   background-color: rgba(196, 196, 196, 0.8);
