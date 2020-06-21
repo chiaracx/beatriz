@@ -7405,6 +7405,10 @@ a + a {
   line-height: 1.2;
   display: inline-block; }
 
+#alejandra {
+  flex-basis: 100%;
+  max-width: 300px; }
+
 .subtitulo {
   font-family: "Lato";
   font-size: 3.5rem;

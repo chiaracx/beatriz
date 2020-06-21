@@ -146,6 +146,10 @@ a+a{
 	line-height: 1.2;
 	display: inline-block;
 }
+#alejandra{
+    flex-basis: 100%;
+    max-width: 300px;;
+}
 
 .subtitulo{
     @include fontySize($fontBody, 3.5rem);
