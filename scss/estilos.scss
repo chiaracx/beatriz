@@ -50,8 +50,6 @@ body{
 	100% {opacity: 1;}
 }
 
-
-
 .menu{
 	text-align: center;
 	font-size: 2rem;
@@ -140,6 +138,10 @@ a+a{
         }
     }
 }
+.subtitulo-inicio{
+    padding: 8px;
+    background-color: white;
+}
 
 #parrafo-inicio {
 	font-size: 1.8rem; 
@@ -190,16 +192,23 @@ a+a{
 
 .seccion-2{ 
     #firstRow,#secondRow,#thirdRow{
+    position: relative;
 	margin: 1rem;
-	padding: 1vw;
-	border: 5px solid $yellow;
+	padding: 0.5vw;
+	border: 2px solid $yellow;
 	line-height: 2;
 	display: flex;
-	flex-direction: row;
+    flex-direction: column;
+    background-color: $white;
+    div{
+        text-align: center;
+        h3{
+            @include fontySize($fontFantasia, 2.8rem);
+        }   
     }
 }
+
 .precio{
-    text-align: right;
     font-weight: bolder;
 }
 
