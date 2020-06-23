@@ -53,35 +53,27 @@ body{
 .menu{
 	text-align: center;
 	font-size: 2rem;
-    display: flex;
-    flex-direction: row;
 	padding: 1.5rem;
 	border-bottom: 2px solid $grey;
 	margin-bottom: 1rem;
-	align-items: center;
-	flex-direction: row;
-    justify-content: space-between;
     div{
-        position: relative;
+        align-items: center;
+        flex-direction: row;
+        justify-content: center;
         div{
-            position: absolute;
-            left: 15%;
             a{
-                /*border-radius: 50%;*/
-                /*padding: 15px;*/
+                padding: 15px;
                 background-color: $white;
                 color: lighten($yellow, 5%);
                 text-decoration: none;
+                font-weight: bolder;
                 &:hover{
                 text-decoration: underline;
-                /*background-color: $grey;*/
                 }
             }
         }
     }
 }
-
-
 .navbar-toggler-icon{
     width: 3rem;
     height: 3rem;
