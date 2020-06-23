@@ -80,9 +80,7 @@ body{
         }
     }
 }
-a+a{
-    margin-right: 25px;
-}
+
 
 .navbar-toggler-icon{
     width: 3rem;
@@ -206,6 +204,7 @@ a+a{
             @include fontySize($fontFantasia, 2.8rem);
         }   
     }
+    }
 }
 
 .precio{
@@ -324,17 +323,19 @@ button + button{
         div{
             div{
                 a{
-                    padding: 5px;
+                    padding: 3px;
                 }
             }
         }
+    }
+    a+a{
+        margin-right: 5px;
     }
 	.encabezado{
         margin-top: 6vh;
         h1{
             font-size: 4rem;
         }
-        
     }
     .receta{
         .contenedor-receta{
@@ -350,7 +351,7 @@ button + button{
         div{
             div{
                 a{
-                    padding: 9px;
+                    padding: 3px;
                 }
             }
         }    
@@ -369,7 +370,11 @@ button + button{
         }
     }
 }
+
 @media (min-width: 1100px){
+    a+a{
+        margin-right: 25px;
+    }
     .pagina-clases{
         margin-right: 8vw;
     }

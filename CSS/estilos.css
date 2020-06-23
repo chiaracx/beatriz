@@ -7353,9 +7353,6 @@ body {
           text-decoration: underline;
           /*background-color: $grey;*/ }
 
-a + a {
-  margin-right: 25px; }
-
 .navbar-toggler-icon {
   width: 3rem;
   height: 3rem; }
@@ -7452,8 +7449,6 @@ a + a {
   background-color: #fff; }
   .seccion-2 #firstRow div, .seccion-2 #secondRow div, .seccion-2 #thirdRow div {
     text-align: center; }
-    .seccion-2 #firstRow div p ol, .seccion-2 #secondRow div p ol, .seccion-2 #thirdRow div p ol {
-      list-style-type: none; }
     .seccion-2 #firstRow div h3, .seccion-2 #secondRow div h3, .seccion-2 #thirdRow div h3 {
       font-family: "Dancing Script";
       font-size: 2.8rem; }
@@ -7556,7 +7551,9 @@ button + button {
     font-size: 1.5rem;
     padding: .5rem; }
     .menu div div a {
-      padding: 5px; }
+      padding: 3px; }
+  a + a {
+    margin-right: 5px; }
   .encabezado {
     margin-top: 6vh; }
     .encabezado h1 {
@@ -7568,7 +7565,7 @@ button + button {
   .menu {
     font-size: 1.6rem; }
     .menu div div a {
-      padding: 9px; }
+      padding: 3px; }
   .encabezado {
     margin-top: 7vh; }
     .encabezado h1 {
@@ -7577,6 +7574,8 @@ button + button {
     display: none; } }
 
 @media (min-width: 1100px) {
+  a + a {
+    margin-right: 25px; }
   .pagina-clases {
     margin-right: 8vw; }
   .pagina-pasteleria {
