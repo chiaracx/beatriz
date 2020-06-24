@@ -42,7 +42,7 @@ $titpagina: "inicio","menus", "contacto", "clases", "pasteleria";
 }
 
 body{
-    @include fontySize($fontBody, 1.8rem)
+    @include fontySize($fontBody, 1.8rem);
 	}
 
 @keyframes aparicionLogo{
@@ -60,7 +60,7 @@ body{
         align-items: center;
         flex-direction: row;
         justify-content: center;
-        div{
+        .padre-enlaces{
             a{
                 padding: 15px;
                 background-color: $white;
@@ -80,9 +80,6 @@ body{
 }
 
 .encabezado{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
 	background-image: url("../imagenes/torta2.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -90,14 +87,15 @@ body{
 	margin-top: 8vh;
 	padding: 15vh;
     overflow: hidden;
+    text-align: center;
     .contenedor-logo{
         overflow: hidden;
         width: 25vw;
         height: 30vh;
         border-radius: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
         animation-name: aparicionLogo;
         animation-duration: 2000ms;
     }
@@ -108,7 +106,6 @@ body{
 
 
 .seccion-1{
-	grid-area: section;
 	line-height: 1.5;
 	padding: 10px;
 	margin: 10px;
@@ -247,7 +244,6 @@ body{
 }
 
 .receta{
-	grid-area: aside;
 	margin-top: 10vh;
 	margin-bottom: 10vh;
 	margin-right: 5vw;
@@ -289,7 +285,7 @@ body{
         }
     }
 }
-.pie-pagina{
+footer{
 	background-color: rgba(196,196,196,0.8); 
 	font-style: oblique;
 }
@@ -385,10 +381,10 @@ button + button{
     a+a{
         margin-right: 25px;
     }
-    .pagina-clases{
+    /*.pagina-clases{
         margin-right: 8vw;
     }
     .pagina-pasteleria{
         margin-right: 8vw;
-    }
+    }*/
 }

@@ -7337,13 +7337,13 @@ body {
     align-items: center;
     flex-direction: row;
     justify-content: center; }
-    .menu div div a {
+    .menu div .padre-enlaces a {
       padding: 15px;
       background-color: #fff;
       color: #f5c266;
       text-decoration: none;
       font-weight: bolder; }
-      .menu div div a:hover {
+      .menu div .padre-enlaces a:hover {
         text-decoration: underline; }
 
 .navbar-toggler-icon {
@@ -7351,31 +7351,28 @@ body {
   height: 3rem; }
 
 .encabezado {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   background-image: url("../imagenes/torta2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   margin-top: 8vh;
   padding: 15vh;
-  overflow: hidden; }
+  overflow: hidden;
+  text-align: center; }
   .encabezado .contenedor-logo {
     overflow: hidden;
     width: 25vw;
     height: 30vh;
     border-radius: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     animation-name: aparicionLogo;
     animation-duration: 2000ms; }
   .encabezado img {
     width: 250px; }
 
 .seccion-1 {
-  grid-area: section;
   line-height: 1.5;
   padding: 10px;
   margin: 10px;
@@ -7486,7 +7483,6 @@ body {
   font-size: 2rem; }
 
 .receta {
-  grid-area: aside;
   margin-top: 10vh;
   margin-bottom: 10vh;
   margin-right: 5vw;
@@ -7523,7 +7519,7 @@ body {
       height: auto;
       align-items: center; }
 
-.pie-pagina {
+footer {
   background-color: rgba(196, 196, 196, 0.8);
   font-style: oblique; }
 
@@ -7583,7 +7579,9 @@ button + button {
 @media (min-width: 1100px) {
   a + a {
     margin-right: 25px; }
-  .pagina-clases {
-    margin-right: 8vw; }
-  .pagina-pasteleria {
-    margin-right: 8vw; } }
+  /*.pagina-clases{
+        margin-right: 8vw;
+    }
+    .pagina-pasteleria{
+        margin-right: 8vw;
+    }*/ }
