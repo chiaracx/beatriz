@@ -7173,31 +7173,7 @@ a.text-dark:hover, a.text-dark:focus {
 * {
   box-sizing: border-box; }
 
-.pagina-inicio {
-  font-family: "Lora";
-  font-size: 5rem;
-  text-align: center;
-  font-weight: bolder; }
-
-.pagina-menus {
-  font-family: "Lora";
-  font-size: 5rem;
-  text-align: center;
-  font-weight: bolder; }
-
-.pagina-contacto {
-  font-family: "Lora";
-  font-size: 5rem;
-  text-align: center;
-  font-weight: bolder; }
-
-.pagina-clases {
-  font-family: "Lora";
-  font-size: 5rem;
-  text-align: center;
-  font-weight: bolder; }
-
-.pagina-pasteleria {
+.titulos-paginas {
   font-family: "Lora";
   font-size: 5rem;
   text-align: center;
@@ -7428,13 +7404,13 @@ body {
   justify-content: center;
   align-items: center; }
 
-.tipos-menus {
+.menus-semanales {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-content: stretch; }
-  .tipos-menus #firstRow, .tipos-menus #secondRow, .tipos-menus #thirdRow {
+  .menus-semanales .menu-semanal-item {
     max-width: 300px;
     position: relative;
     margin: 1rem;
@@ -7442,25 +7418,24 @@ body {
     border: 2px solid #f3b94e;
     line-height: 2;
     background-color: #fff; }
-    .tipos-menus #firstRow div, .tipos-menus #secondRow div, .tipos-menus #thirdRow div {
+    .menus-semanales .menu-semanal-item div {
       display: flex;
       flex-direction: column;
       justify-content: center;
       text-align: center; }
-      .tipos-menus #firstRow div .imagenes-menus, .tipos-menus #secondRow div .imagenes-menus, .tipos-menus #thirdRow div .imagenes-menus {
+      .menus-semanales .menu-semanal-item div .imagenes-menus {
         overflow: hidden;
         width: 15vw;
         height: 20vh;
-        border-radius: 50%;
         display: block;
         margin: auto;
         justify-content: center;
         align-items: center;
         justify-items: center; }
-        .tipos-menus #firstRow div .imagenes-menus img, .tipos-menus #secondRow div .imagenes-menus img, .tipos-menus #thirdRow div .imagenes-menus img {
+        .menus-semanales .menu-semanal-item div .imagenes-menus img {
           max-width: 200px;
           flex-basis: 100%; }
-      .tipos-menus #firstRow div h3, .tipos-menus #secondRow div h3, .tipos-menus #thirdRow div h3 {
+      .menus-semanales .menu-semanal-item div h3 {
         font-family: "Dancing Script";
         font-size: 3rem; }
 
@@ -7478,37 +7453,31 @@ body {
   align-items: center;
   justify-content: space-between; }
 
-.titulo {
-  font-family: "Dancing Script";
-  font-size: 2rem; }
-
 .receta {
   margin-top: 10vh;
   margin-bottom: 10vh;
-  margin-right: 5vw;
-  overflow: scroll;
+  margin-right: 2vw;
+  overflow: auto;
   background-color: #fff;
   font-family: "Lato";
-  padding: 2.5rem;
   font-size: 1.5rem;
+  padding: 2.5rem;
   border: 4px dotted #f3b94e; }
   .receta h2 {
-    font-size: 3rem;
     font-family: "Dancing Script";
+    font-size: 3rem;
     border-bottom: 2px solid #f3b94e;
     text-align: center; }
   .receta h3 {
-    font-size: 2.5rem;
     font-family: "Dancing Script";
+    font-size: 2.5rem;
     text-align: center; }
   .receta ol {
     margin-bottom: 2vh; }
   .receta .contenedor-receta {
-    margin-left: 2vw;
-    display: flex;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
     width: 15vw;
     height: 15vh;
     overflow: hidden;
