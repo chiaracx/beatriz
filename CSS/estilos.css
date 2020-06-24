@@ -7173,12 +7173,6 @@ a.text-dark:hover, a.text-dark:focus {
 * {
   box-sizing: border-box; }
 
-.titulos-paginas {
-  font-family: "Lora";
-  font-size: 5rem;
-  text-align: center;
-  font-weight: bolder; }
-
 .texto-blue {
   color: #007bff; }
 
@@ -7514,6 +7508,12 @@ ol li {
 
 .curso {
   border: 2px solid #f3b94e; }
+
+.titulos-paginas {
+  font-family: "Lora";
+  font-size: 5rem;
+  text-align: center;
+  font-weight: bolder; }
 
 button + button {
   margin: 2rem; }
